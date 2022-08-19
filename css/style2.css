@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    color: black;
+}
+
+/* body {
+    background-color: #fffef5;
+} */
+
+header, footer, article {
+    border: 2px solid black;
+    border-radius: 50px;
+    margin: 10px;
+}
+
+header, footer {
+    padding: 20px;
+    font-size: 20px;
+    /* font-style: italic; */
+}
+
+article {
+    padding: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* 가로 100%, 세로 100vh 크기 단위로 전체영역이 설정된다 */
+.container {
+    width: 100%;
+    height: 100vh;
+}
+
+ul {
+    /* width: 80%; */
+    /* height: 80px; */
+    /* margin: 0 auto; */
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+}
+
+#homeIcon {
+    position: absolute;
+}
+
+article {
+    height: 75vh;
+    position: absolute;
+}
+
+img {
+    width: 80%;
+}
+
+.articleText {
+    margin: 10%;
+}
+
+h1 {
+    margin: 10px;
+}
+
+footer {
+    display: block;
+    position:fixed;
+    bottom:0;
+    left: 0px;
+    right: 0px;
+}
