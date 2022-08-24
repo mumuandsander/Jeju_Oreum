@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -7,68 +9,68 @@
     color: black;
 }
 
-/* body {
-    background-color: #fffef5;
+/* header {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    padding: 0;
+    position: fixed;
 } */
 
-header, footer, article {
+article {
     border: 2px solid black;
-    border-radius: 50px;
-    margin: 10px;
-}
-
-header, footer {
-    padding: 20px;
-    font-size: 20px;
-    /* font-style: italic; */
-}
-
-article {
-    padding: 50px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
-/* 가로 100%, 세로 100vh 크기 단위로 전체영역이 설정된다 */
-.container {
-    width: 100%;
-    height: 100vh;
-}
-
-ul {
-    /* width: 80%; */
-    /* height: 80px; */
-    /* margin: 0 auto; */
-    display: flex;
-    justify-content: space-evenly;
-    position: relative;
-}
-
-#homeIcon {
-    position: absolute;
-}
-
-article {
-    height: 75vh;
-    position: absolute;
+    border-radius: 100px;
+    margin:50px;
+    max-height: fit-content;
+    height: 90vh;
 }
 
 img {
-    width: 80%;
+    display: block;
+    margin: 0 auto;
+    /* width: 50%; */
+    padding: 10px;
 }
+
+/* #main {
+    padding: 50px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    height: 100vh;
+} */
 
 .articleText {
-    margin: 10%;
+    padding: 10%;
 }
 
-h1 {
-    margin: 10px;
+/* #nav {
+    font-size: 35px;
+    font-style: italic;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: relative;
+
+    padding-left: 0;
+    margin-left: 0;
+    margin-right: 0;
+
+    position: fixed;
+} */
+
+#main h1 {
+    font-size: 150px;
+    font-family: 'Monoton', cursive;
+    text-align: center;
 }
 
-footer {
-    display: block;
-    position:fixed;
-    bottom:0;
-    left: 0px;
-    right: 0px;
+#main {
+    position: relative;
+    height: 100vh;
+}
+
+#main a {
+    text-decoration: none;
+    color: #11a459;
 }

@@ -1,37 +1,151 @@
-git<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="bootstrap-5.1.3-dist/css/bootstrap.min.css">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
     <title>Jeju Oreum Tour</title>
 </head>
 
 <body>
     <div class="container">
         <header>
-            <div id="homeIcon"><a href="#">home</a></div>
-            <ul>
-                <li><a href="#">동부</a></li>
-                <li><a href="#">서부</a></li>
-                <li><a href="#">남부</a></li>
-                <li><a href="#">북부</a></li>
-            </ul>
+            <nav>
+                <ul id="nav">
+                    <li><a href="#동">동</a></li>
+                        <ul>
+                            <li><a onclick="
+                                fetch('./data/안돌오름').then(function(response) {
+                                    response.text().then(function(text) {
+                                        document.querySelector('#동').innerHTML = text;
+                                    })
+                                });
+                                ">안돌오름</li>
+                            <li><a onclick="
+                                fetch('./data/백약이오름').then(function(response) {
+                                    response.text().then(function(text) {
+                                        document.querySelector('#동').innerHTML = text;
+                                    })
+                                });
+                                ">백약이오름</li>
+                            <li><a onclick="
+                                fetch('./data/따라비오름').then(function(response) {
+                                    response.text().then(function(text) {
+                                        document.querySelector('#동').innerHTML = text;
+                                    })
+                                });
+                                ">따라비오름</li>
+                        </ul>
+                    <li>서</li>`
+                    <li>남</li>
+                    <li>북</li>
+                </ul>
+            </nav>
         </header>
 
-        <article>
-            <img src="img/2012_ㅋㅋ.jpeg" alt="">
-            <div class="articleText">
-                <h1>JEJU OREUM Tour</h1>
-                <p>'오름'은 작은 산을 뜻하는 제주도 방언으로 각자의 분화구가 있는 소화산을 말합니다. 제주의 상징성이 담긴 소박한 매력의 오름은 총 368개로 1년 동안 매일 다른 오름에 올라도 전부 오를 수 없을만큼 많은데요, 한라산 정산 부근에서 부터 해안가에 이르기까지 어느 곳에서나 찾아볼 수 있답니다. <br>너무나 매력적인 제주의 대표 오름들을 동서남북으로 나눠 소개해드리겠습니다. 오름 투어를 계획하신다면 조금이나마 도움이 되었으면 좋겠네요. </p>
-            </div>
-        </article>
+        <!-- <header>
+            <nav class="navbar navbar-expand-lg navbar-light ">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="#">Home</a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
 
-        <footer>
+                  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                동부
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                              <li><a class="dropdown-item" onclick="fetchPage('안돌오름')">안돌오름</a></li>
+                              <li><a class="dropdown-item" href="#">오름2</a></li>
+                              <li><a class="dropdown-item" href="#">오름3</a></li>
+                            </ul>
+                          </li>
+                          <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                서부
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="#">오름1</a></li>
+                                <li><a class="dropdown-item" href="#">오름2</a></li>
+                                <li><a class="dropdown-item" href="#">오름3</a></li>
+                            </ul>
+                          </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                남부
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="#">오름1</a></li>
+                                <li><a class="dropdown-item" href="#">오름2</a></li>
+                                <li><a class="dropdown-item" href="#">오름3</a></li>  
+                            </ul>
+                          </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            북부
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">오름1</a></li>
+                            <li><a class="dropdown-item" href="#">오름2</a></li>
+                            <li><a class="dropdown-item" href="#">오름3</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+              </nav>
+        </header> -->
+   
+
+        <section>
+            <div id="main">
+                <!-- <img src="img/IE001489556_STD-removebg-preview.png" alt=""> -->
+                <div class="articleText">
+                    <h1 id="h1"><a href="#">JEJU<br><strong>Oreum</strong><br>Tour</a></h1>
+
+                    <!-- <p>'오름'은 작은 산을 뜻하는 제주도 방언으로 각자의 분화구가 있는 소화산을 말합니다. 
+                        제주의 상징성이 담긴 소박한 매력의 오름은 총 368개로 1년 동안 매일 다른 오름에 올라도 전부 오를 수 없을만큼 많은데요, 
+                        한라산 정산 부근에서 부터 해안가에 이르기까지 어느 곳에서나 찾아볼 수 있답니다. 
+                        <br>너무나 매력적인 제주의 대표 오름들을 동서남북으로 나눠 소개해드리겠습니다. 
+                        오름 투어를 계획하신다면 조금이나마 도움이 되었으면 좋겠네요. </p> -->
+                </div>
+            </div>
+
+            <article id="동">
+                <div class="articleText">
+                </div>
+            </article>
+
+            <article id="서">
+                <div class="articleText">
+                </div>
+            </article>
+
+            <article id="남">
+                <div class="articleText">
+                </div>
+            </article>
+
+            <article id="북">
+                <div class="articleText">
+                </div>
+            </article>
+
+        </section>
+
+        <!-- <footer>
             Copyright 2022 YejinKim
-        </footer>
+        </footer> -->
+
+
     </div>
+    <script src="js/main.js"></script>
+    <script src="bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>
