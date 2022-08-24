@@ -7,11 +7,14 @@
     list-style: none;
     text-decoration: none;
     color: black;
+    font-style: italic;
 }
 
 header {
     position:relative;
 }
+
+
 
 nav {
     /* display: grid;
@@ -19,21 +22,21 @@ nav {
     padding: 0;
     position: fixed;
     z-index: 1;
+    left: 20px;
+    
 }
 
 #navBar {
-    font-size: 20px;
-    font-style: italic;
-
     /* display: flex; */
     /* flex-direction: row; */
     /* justify-content: space-evenly; */
-
+    font-size: 15px;
     padding-left: 0;
     margin: 0;
 }
 
 article {
+    padding: 10%;
     border: 2px solid black;
     border-radius: 100px;
     margin:50px;
@@ -56,9 +59,9 @@ img {
     height: 100vh;
 } */
 
-.articleText {
+/* .articleText {
     padding: 10%;
-}
+} */
 
 #main h1 {
     font-size: 150px;
@@ -66,12 +69,17 @@ img {
     text-align: center;
 }
 
-#main {
-    position: relative;
-    height: 100vh;
-}
-
 #main a {
     text-decoration: none;
     color: #11a459;
+}
+
+.container {
+    position: relative;
+    min-height: 100%;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
 }
