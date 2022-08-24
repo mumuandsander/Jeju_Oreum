@@ -1,1 +1,4 @@
-안돌오름,백약이오름,따라비오름,다랑쉬오름
+<li><a href="#!안돌오름" onclick="fetchPage('안돌오름')">안돌오름</li>
+<li><a href="#!백약이오름" onclick="fetchPage('백약이오름')">백약이오름</li>
+<li><a href="#!따라비오름" onclick="fetchPage('따라비오름')">따라비오름</li>
+<li><a href="#!다랑쉬오름" onclick="fetchPage('다랑쉬오름')">다랑쉬오름</li>
