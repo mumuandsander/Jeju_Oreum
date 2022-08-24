@@ -14,32 +14,15 @@
     <div class="container">
         <header>
             <nav>
-                <ul id="nav">
+                <ul id="navBar">
                     <li><a href="#동">동</a></li>
                         <ul>
-                            <li><a onclick="
-                                fetch('./data/안돌오름').then(function(response) {
-                                    response.text().then(function(text) {
-                                        document.querySelector('#동').innerHTML = text;
-                                    })
-                                });
-                                ">안돌오름</li>
-                            <li><a onclick="
-                                fetch('./data/백약이오름').then(function(response) {
-                                    response.text().then(function(text) {
-                                        document.querySelector('#동').innerHTML = text;
-                                    })
-                                });
-                                ">백약이오름</li>
-                            <li><a onclick="
-                                fetch('./data/따라비오름').then(function(response) {
-                                    response.text().then(function(text) {
-                                        document.querySelector('#동').innerHTML = text;
-                                    })
-                                });
-                                ">따라비오름</li>
+                            <li><a onclick="fetchPage('안돌오름')">안돌오름</li>
+                            <li><a onclick="fetchPage('백약이오름')">백약이오름</li>
+                            <li><a onclick="fetchPage('따라비오름')">따라비오름</li>
+                            <li><a onclick="fetchPage('다랑쉬오름')">다랑쉬오름</li>
                         </ul>
-                    <li>서</li>`
+                    <li>서</li>
                     <li>남</li>
                     <li>북</li>
                 </ul>
