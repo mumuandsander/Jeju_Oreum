@@ -2,7 +2,7 @@
 function fetchPage(name){
     fetch('./data/'+name).then(function(response) {
         response.text().then(function(text) {
-            document.querySelector('.articleText').innerHTML = text;
+            document.querySelector('#articleBody').innerHTML = text;
         })
     })
 }
