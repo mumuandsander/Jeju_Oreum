@@ -18,17 +18,18 @@
             <nav class="navbar navbar-expand-lg navbar-light" id="navbar">
                 
                 <div class="icon">
-                    <dfn title="main"><a href="" id="homeIcon">
+                    <dfn title="main"><a href="#" id="homeIcon" onclick="fetchMain('welcome2')">
                         <img src="./img/home_img.png" alt="" width="30" height="30">
                     </a></dfn>
 
-                    <dfn title="지도로 살펴보기"><a href="#mapBody" id="mapIcon">
+                    <dfn title="지도로 살펴보기"><a href="#" id="mapIcon" onclick="fetchMain('mapBody')">
                         <img src="./img/map_img.png" alt="" width="40" height="40">
                     </a></dfn>
 
-                    <dfn title="오름 사진 보기"><a href="" id="galleryIcon">
+                    <dfn title="오름 사진 보기"><a href="#" id="galleryIcon" onclick="fetchMain('galleryBody')">
                         <img src="./img/gallery_icon.png" alt="" width="33" height="33">
                     </a></dfn>
+
                 </div>
 
                     <ul class="navbar-nav">
@@ -59,23 +60,15 @@
             </nav>
         </header>
 
-        <!-- 오름 리스트 5~10개씩 추가로 자료조사하기 -->
         <section>
             <article id="main">
                 <div id="articleBody"></div>
-                <ul class="infoList"></ul>
             </article>
 
-            <article id="mapBody" >
-                <div id="map" style="width:100%; height:100%;"></div>
-            </article>
+            <!-- <article id="mapBody" >
+                <div id="map" style="width:100%; height:100%;" style="display: none;"></div>
+            </article> -->
 
-            <article id="galleryBody" class="tabcontent" style="display: none;">
-                <h1>Gallery</h1>
-                <h1>Gallery</h1>
-                <h1>Gallery</h1>
-                <h1>Gallery</h1>
-            </article>
         </section>
 
         <footer>
@@ -84,11 +77,10 @@
         </footer>
     </div>
 
-
-    <script src="bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>
-    <script src="js/main.js"></script>
     <!-- 카카오맵 API -->
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=115d2cad3929e260adac719ce1c5bf5a"></script>
     <script src="js/map.js"></script>
+    <script src="bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>
+    <script src="js/main_test.js"></script>
 </body>
 </html>

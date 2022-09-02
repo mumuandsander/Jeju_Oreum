@@ -49,7 +49,7 @@ article {
     line-height: 30px;
 }
 
-#articleBody h1 {    
+h1 {    
     font-size: 90px;
     font-family: 'Monoton', cursive;
     text-align: center;
@@ -57,13 +57,13 @@ article {
     margin: 5%;
 }
 
-#articleBody p {
+#main p {
     text-shadow: 3px 3px 4px #b7b7b7;
     text-align: center;
     margin: 0;
 }
 
-#articleBody h2{
+h2{
     font-size: 40px;
     text-align: center;
     margin: 5%
@@ -126,7 +126,7 @@ a {
     text-decoration: none;
 }
 
-#mapIcon {
+#mapIcon, #galleryIcon {
     padding-left: 6px;
 }
 
@@ -166,3 +166,7 @@ a {
     height: 79vh;
     position: inherit;
 }
+
+/* test */
+
+/* Create an active/current tablink class */
