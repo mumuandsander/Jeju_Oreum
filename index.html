@@ -18,15 +18,15 @@
             <nav class="navbar navbar-expand-lg navbar-light" id="navbar">
                 
                 <div class="icon">
-                    <a href="" id="homeIcon">
+                    <dfn title="main"><a href="" id="homeIcon">
                         <img src="./img/home_img.png" alt="" width="30" height="30">
-                    </a>
+                    </a></dfn>
 
                     <!-- 지도 api로 오름 좌표를 찍을 수 있을까?? -->
                     <!-- instagram 갤러리도?? -->
-                    <a href="" id="map">
+                    <dfn title="지도로 살펴보기"><a href="#mapBody" id="mapIcon">
                         <img src="./img/map_img.png" alt="" width="40" height="40">
-                    </a>
+                    </a></dfn>
                 </div>
 
                     <ul class="navbar-nav">
@@ -64,18 +64,44 @@
                 <ul class="infoList"></ul>
             </article>
 
+            <article id="mapBody">
+                <div id="map" style="width:100%; height:100%;"></div>
+            </article>
         </section>
 
         <footer>
-            <span>Copyright 2022 Yejin Kim</span>
+            <span>© 2022 Yejin Kim</span>
             <span>E-mail: mumuandsander@gmail.com</span>
         </footer>
-
     </div>
 
 
     <script src="bootstrap-5.1.3-dist/js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
+
+    <!-- 카카오맵 API -->
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=115d2cad3929e260adac719ce1c5bf5a"></script>
+    <script>
+        var container = document.getElementById('map');
+        var options = {
+            center: new kakao.maps.LatLng(33.457678, 126.755951),
+            level: 9 // 확대레벨
+        };
+
+        var map = new kakao.maps.Map(container, options);
+
+
+        // https://apis.map.kakao.com/web/sample/multipleMarkerImage/
+        // 마커가 표시될 위치입니다 
+        var markerPosition  = new kakao.maps.LatLng(33.457678, 126.755951);
+        // 마커를 생성합니다
+        var marker = new kakao.maps.Marker({
+            position: markerPosition
+        });
+        // 마커가 지도 위에 표시되도록 설정합니다
+        marker.setMap(map);
+
+    </script>
 </body>
 
 </html>
